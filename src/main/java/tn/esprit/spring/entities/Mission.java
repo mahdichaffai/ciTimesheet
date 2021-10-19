@@ -27,7 +27,7 @@ public class Mission implements Serializable {
 	@ManyToOne
 	private Departement departement;
 	
-	// Mission est la cardinalité la plus faible, donc mappedBy ici :
+	// Mission est la cardinalité la plus faible, donc mappedBy ici :hj
 	@OneToMany(mappedBy="mission")
 	private  List<Timesheet> timesheets;
 	
