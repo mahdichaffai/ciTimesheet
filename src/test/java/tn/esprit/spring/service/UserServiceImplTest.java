@@ -18,6 +18,7 @@ import tn.esprit.spring.entities.Role;
 import tn.esprit.spring.entities.User;
 import tn.esprit.spring.services.IUserService;
 
+import  java.util.Optional;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserServiceImplTest {
@@ -29,7 +30,7 @@ public class UserServiceImplTest {
 		public void testRetrieveAllUsers() {
 			List<User> listUsers = us.retrieveAllUsers(); 
 			// if there are 7 users in DB : 
-			Assert.assertEquals(15, listUsers.size());
+			Assert.assertEquals(8, listUsers.size());
 		}
 		
 		
@@ -53,14 +54,14 @@ public class UserServiceImplTest {
 	
 		@Test
 		public void testRetrieveUser() {
-			User userRetrieved = us.retrieveUser("1"); 
-			Assert.assertEquals(1L, userRetrieved.getId().longValue());
+			User userRetrieved = us.retrieveUser("2"); 
+			Assert.assertEquals(2L, userRetrieved.getId().longValue());
 		}
 		
 		@Test
 		public void testDeleteUser() {
-			us.deleteUser("3");
-			Assert.assertNull(us.retrieveUser("3"));
+			us.deleteUser("10");
+		 Assert.assertNull(us.retrieveUser("10"));
 		}
 		
 		// 5 tests unitaires  

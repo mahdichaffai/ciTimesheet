@@ -82,6 +82,15 @@ public class Entreprise implements Serializable{
 		this.departements.add(departement);
 	}
 
+	public Entreprise(String name, String raisonSocial, List<Departement> departements) {
+		super();
+		this.name = name;
+		this.raisonSocial = raisonSocial;
+		this.departements = departements;
+	}
+
+	
+
 
 
 
