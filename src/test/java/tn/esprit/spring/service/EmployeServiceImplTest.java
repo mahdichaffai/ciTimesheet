@@ -32,7 +32,7 @@ public class EmployeServiceImplTest {
 	public void testRetrieveAllEmployees() {
 		List<Employe> listEmployees = es.retrieveAllEmployees(); 
 		// if there are 7 users in DB : 
-		Assert.assertEquals(22, listEmployees.size());
+		Assert.assertEquals(25, listEmployees.size());
 	}
 	@Test
 	public void testAddEmploye() throws ParseException {
@@ -57,8 +57,8 @@ public class EmployeServiceImplTest {
 	
 	@Test
 	public void testDeleteEmploye() {
-		es.deleteEmploye("22");
-	    Assert.assertNull(es.retrieveEmploye("22"));
+		es.deleteEmploye("23");
+	    Assert.assertNull(es.retrieveEmploye("23"));
 	}
 	
 	// 5 tests unitaires  
