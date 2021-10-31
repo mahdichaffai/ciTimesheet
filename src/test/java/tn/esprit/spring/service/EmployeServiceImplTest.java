@@ -55,11 +55,11 @@ public class EmployeServiceImplTest {
 		Assert.assertEquals(4L, EmployeRetrieved.getId().longValue());
 	}
 	
-	@Test
-	public void testDeleteEmploye() {
-		es.deleteEmploye("26");
-	   // Assert.assertNull(es.retrieveEmploye("25"));
-	}
+//	@Test
+//	public void testDeleteEmploye() {
+//		es.deleteEmploye("26");
+//	   // Assert.assertNull(es.retrieveEmploye("25"));
+//	}
 	
 	// 5 tests unitaires  
 

@@ -58,12 +58,12 @@ public class UserServiceImplTest {
 			Assert.assertEquals(2L, userRetrieved.getId().longValue());
 		}
 		
-		@Test
-		public void testDeleteUser() {
-			us.deleteUser("27");
-		// Assert.assertNull(us.retrieveUser("26"));
-		}
-		
+//		@Test
+//		public void testDeleteUser() {
+//			us.deleteUser("27");
+//		// Assert.assertNull(us.retrieveUser("26"));
+//		}
+//		
 		// 5 tests unitaires  
  
 }
