@@ -19,7 +19,7 @@ import tn.esprit.spring.entities.User;
 import tn.esprit.spring.services.IUserService;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+//@SpringBootTest
 public class UserServiceImplTest {
 
 		@Autowired
@@ -29,7 +29,7 @@ public class UserServiceImplTest {
 		public void testRetrieveAllUsers() {
 			List<User> listUsers = us.retrieveAllUsers(); 
 			// if there are 7 users in DB : 
-			Assert.assertEquals(15, listUsers.size());
+			Assert.assertEquals(12, listUsers.size());
 		}
 		
 		
@@ -46,7 +46,7 @@ public class UserServiceImplTest {
 		public void testModifyUser() throws ParseException   {
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 			Date d = dateFormat.parse("2015-03-23");
-			User u = new User(5L, "Mayssa122222222", "Mayssa", d, Role.INGENIEUR); 
+			User u = new User(1L, "Mayssa122222222", "Mayssa", d, Role.INGENIEUR); 
 			User userUpdated  = us.updateUser(u); 
 			Assert.assertEquals(u.getLastName(), userUpdated.getLastName());
 		}
@@ -59,8 +59,8 @@ public class UserServiceImplTest {
 		
 		@Test
 		public void testDeleteUser() {
-			us.deleteUser("3");
-			Assert.assertNull(us.retrieveUser("3"));
+			us.deleteUser("15");
+			Assert.assertNull(us.retrieveUser("15"));
 		}
 		
 		// 5 tests unitaires  
