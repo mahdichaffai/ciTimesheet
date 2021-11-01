@@ -42,6 +42,7 @@ public class EmployeServiceImplTest {
 	public void AtestAddEmploye() throws ParseException {
 		Employe e= new Employe("sarra", "sarra", "sarra.zribi@esprit.tn", "xxxxx",true, Role.INGENIEUR);
 		Employe EmployeAdded = es.addEmploye(e); 
+		this.EmployeAdded= EmployeAdded;
 		Assert.assertEquals(e.getNom(),EmployeAdded.getPrenom());
 	}
  
@@ -55,17 +56,17 @@ public class EmployeServiceImplTest {
 
 	@Test
 	public void CtestRetrieveEmploye() {
-////		Employe EmployeRetrieved = es.retrieveEmploye("4") ;
-////		Assert.assertEquals(4L, EmployeRetrieved.getId().longValue());
-//		Employe EmployeRetrieved = es.retrieveEmploye(EmployeAdded.getId().toString()); 
-//		Assert.assertNotNull(EmployeRetrieved);
-//	}
-//	
-//	@Test
-//	public void EtestDeleteEmploye() {
-//		es.deleteEmploye("EmployeAdded.getId().toString()");
-//	   Assert.assertNull(es.retrieveEmploye(EmployeAdded.getId().toString()));
-//	}
+//		Employe EmployeRetrieved = es.retrieveEmploye("4") ;
+//		Assert.assertEquals(4L, EmployeRetrieved.getId().longValue());
+		Employe EmployeRetrieved = es.retrieveEmploye(EmployeAdded.getId()); 
+		Assert.assertNotNull(EmployeRetrieved);
+	}
+	
+	@Test
+	public void EtestDeleteEmploye() {
+		es.deleteEmploye(EmployeAdded.getId());
+	   Assert.assertNull(es.retrieveEmploye(EmployeAdded.getId()));
+	}
 	
 	// 5 tests unitaires  
 

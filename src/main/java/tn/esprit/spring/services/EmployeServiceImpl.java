@@ -40,9 +40,9 @@ public class EmployeServiceImpl implements IEmployeService {
 		return  empl.save(em);
 	}
 	@Override
-	public void deleteEmploye(String id) {
+	public void deleteEmploye(Long id) {
 		// TODO Auto-generated method stub
-		empl.deleteById(Long.parseLong(id));
+		empl.deleteById(id);
 		
 	}
 	@Override
@@ -51,12 +51,12 @@ public class EmployeServiceImpl implements IEmployeService {
 		return  empl.save(em);
 	}
 	@Override
-	public Employe retrieveEmploye(String id) {
+	public Employe retrieveEmploye(Long id) {
 		// TODO Auto-generated method stub
 		l.info("in  retrieveEmploye id = " + id);
 		//User u =  userRepository.findById(Long.parseLong(id)).get();
 		//int i = 1/0; 
-		Employe e =  empl.findById(Long.parseLong(id)).orElse(null); 
+		Employe e =  empl.findById(id).orElse(null); 
 		//Employe e =  empl.findById(Long.parseLong(id)).get();
 		l.info("Employe returned : " + e);
 		return e; 

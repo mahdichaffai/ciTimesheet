@@ -10,7 +10,8 @@ import tn.esprit.spring.entities.User;
 public interface IEmployeService {
 	List<Employe> retrieveAllEmployees(); 
 	Employe addEmploye(Employe em);
-	void deleteEmploye(String id);
+	
 	Employe updateEmploye(Employe em);
-	Employe retrieveEmploye(String id);
+	Employe retrieveEmploye(Long id);
+	void deleteEmploye(Long id);
 }
