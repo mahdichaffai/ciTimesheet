@@ -15,9 +15,6 @@ import javax.persistence.OneToMany;
 @Entity
 public class Entreprise implements Serializable{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 3152690779535828408L;
 
 	
