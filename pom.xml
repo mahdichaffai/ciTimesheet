@@ -56,16 +56,15 @@
 		</dependency>
 
 	</dependencies>
-<distributionManagement>
-    <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://localhost:8081/#browse/browse:maven-snapshots/</url>
-    </snapshotRepository>
-    <repository>
+<repositories>
+<repository>
       <id>nexus-releases</id>
-      <url>http://localhost:8081/#browse/browse:maven-releases/</url>
+      <url>http://localhost:8081/nexus/content/repositories/releases/</url>
     </repository>
-  </distributionManagement>
+
+</repositories>
+    
+  
 
 
 </project>
