@@ -2,8 +2,6 @@ package tn.esprit.spring.services;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,7 +61,7 @@ public class UserServiceImpl implements IUserService {
 		l.info("in  retrieveUser id = " + id);
 		//User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
 		//int i = 1/0; 
-		User u =  userRepository.findById(Long.parseLong(id)).get(); 
+		User u =  userRepository.findById(Long.parseLong(id)).orElse(null); 
 		l.info("user returned : " + u);
 		return u; 
 	}
