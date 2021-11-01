@@ -9,16 +9,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import org.apache.log4j.Logger;
 
 @Entity
 public class Mission implements Serializable {
+	
+	private static final Logger l = Logger.getLogger(Mission.class);
 
 	private static final long serialVersionUID = -5369734855993305723L;
 
 	// Auto Increment 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	
 	private String name;
 	
@@ -28,6 +31,7 @@ public class Mission implements Serializable {
 	private Departement departement;
 	
 	// Mission est la cardinalité la plus faible, donc mappedBy ici :hj
+	
 	@OneToMany(mappedBy="mission")
 	private  List<Timesheet> timesheets;
 	
@@ -41,11 +45,11 @@ public class Mission implements Serializable {
 	}
 	
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
