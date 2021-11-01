@@ -19,7 +19,6 @@ pipeline {
             post {
             success {
                jacoco()
-               junit '*/target/surefire-reports/TEST-.xml'
             }
            }
            
