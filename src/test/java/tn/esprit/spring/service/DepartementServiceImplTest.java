@@ -62,8 +62,8 @@ public class DepartementServiceImplTest {
 
 	@Test
 	public void testDeleteDepartement() {
-		us.deleteDep("35");
-		Assert.assertNull(us.retrieveDep("35"));
+		us.deleteDep("37");
+		Assert.assertNull(us.retrieveDep("37"));
 	} 
 }
 
