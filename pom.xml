@@ -58,10 +58,9 @@
 	</dependencies>
 <repositories>
 <repository>
-      <id>nexus-releases</id>
-      <url>http://localhost:8081/nexus/content/repositories/releases/</url>
-    </repository>
-
+<id>maven-group</id>
+<url>http://localhost:8081/repository/maven-group/</url>
+</repository>
 </repositories>
     
   

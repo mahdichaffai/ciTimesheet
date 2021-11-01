@@ -33,36 +33,36 @@ public class EmployeServiceImplTest {
 	@Autowired
 	IEmployeService es;
 	@Test
-	public void testRetrieveAllEmployees() {
+	public void DtestRetrieveAllEmployees() {
 		List<Employe> listEmployees = es.retrieveAllEmployees(); 
 		// if there are 7 users in DB : 
 		Assert.assertTrue(1<= listEmployees.size());
 	}
 	@Test
-	public void testAddEmploye() throws ParseException {
+	public void AtestAddEmploye() throws ParseException {
 		Employe e= new Employe("sarra", "sarra", "sarra.zribi@esprit.tn", "xxxxx",true, Role.INGENIEUR);
 		Employe EmployeAdded = es.addEmploye(e); 
 		Assert.assertEquals(e.getNom(),EmployeAdded.getPrenom());
 	}
  
 	@Test
-	public void testModifyEmploye() throws ParseException   {
+	public void BtestModifyEmploye() throws ParseException   {
 
 		Employe e= new Employe("sarra", "sarraZr", "sarra.zribi@esprit.tn", "yyyy",false, Role.INGENIEUR);
 		Employe EmployeUpdated  = es.updateEmploye(e); 
 		//Assert.assertEquals(e.getNom(),EmployeUpdated.getPrenom());
 	}
 
-//	@Test
-//	public void testRetrieveEmploye() {
-////		Employe EmployeRetrieved = es.retrieveEmploye("4") ;
-////		Assert.assertEquals(4L, EmployeRetrieved.getId().longValue());
-//		Employe EmployeRetrieved = es.retrieveEmploye(EmployeAdded.getId().toString()); 
-//		Assert.assertNotNull(EmployeRetrieved);
-//	}
+	@Test
+	public void CtestRetrieveEmploye() {
+//		Employe EmployeRetrieved = es.retrieveEmploye("4") ;
+//		Assert.assertEquals(4L, EmployeRetrieved.getId().longValue());
+		Employe EmployeRetrieved = es.retrieveEmploye(EmployeAdded.getId().toString()); 
+		Assert.assertNotNull(EmployeRetrieved);
+	}
 //	
 //	@Test
-//	public void testDeleteEmploye() {
+//	public void EtestDeleteEmploye() {
 //		es.deleteEmploye("EmployeAdded.getId().toString()");
 //	   Assert.assertNull(es.retrieveEmploye(EmployeAdded.getId().toString()));
 //	}
