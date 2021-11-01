@@ -1,7 +1,7 @@
 
 package tn.esprit.spring.service;
 
- 
+ /*
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,7 +19,7 @@ import tn.esprit.spring.entities.User;
 import tn.esprit.spring.services.IUserService;
 
 @RunWith(SpringRunner.class)
-//@SpringBootTest
+@SpringBootTest
 public class UserServiceImplTest {
 
 		@Autowired
@@ -66,7 +66,7 @@ public class UserServiceImplTest {
 		// 5 tests unitaires  
 		// branch william 
  
-}
+}*/
 
 
 
