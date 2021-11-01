@@ -2,7 +2,6 @@ package tn.esprit.spring.services;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -57,15 +56,13 @@ public class UserServiceImpl implements IUserService {
 	public void deleteUser(String id) {
 		userRepository.deleteById(Long.parseLong(id));
 	}
-
+/*
 	@Override
 	public User retrieveUser(String id) {
 		l.info("in  retrieveUser id = " + id);
-		//User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
-		//int i = 1/0; 
-		User u =  userRepository.findById(Long.parseLong(id)).get(); 
+		User u = userRepository.findById(Long.parseLong(id)).get(); 
 		l.info("user returned : " + u);
 		return u; 
 	}
-
+*/
 }
