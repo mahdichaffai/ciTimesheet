@@ -59,13 +59,13 @@ public class DepartementServiceImplTest {
 		Assert.assertEquals(7,DepartementRetrieved.getId());
 		log.info("retrieveDepartement : " + DepartementRetrieved );
 	}
-
+/*
 	@Test
 	public void testDeleteDepartement() {
 		us.deleteDep("40");
 		Assert.assertNull(us.retrieveDep("40"));
 	} 
-	
+	*/
 }
 
 
