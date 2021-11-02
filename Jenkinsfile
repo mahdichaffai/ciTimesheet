@@ -34,7 +34,11 @@ pipeline {
          }
        }
        
-       
+       stage ('Email Notification') {
+        steps {
+           mail bcc: '', body: 'your pipeline is building', cc: '', from: '', replyTo: '', subject: 'Build', to: 'benabdelkader.marwan@gmail.com'
+         }
+      }
     
    }   
 }
