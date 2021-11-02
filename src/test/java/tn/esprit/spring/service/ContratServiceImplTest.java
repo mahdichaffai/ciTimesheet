@@ -24,44 +24,43 @@ public class ContratServiceImplTest {
 
 	@Autowired
 	IContratService cs;
-	
+
 	@Test
 	public void DtestRetrieveAllContrats() {
-		List<Contrat> listContrats = cs.retrieveAllContrats(); 
-		// if there are 7 contrats in DB : 
+		List<Contrat> listContrats = cs.retrieveAllContrats();
+		// if there are 7 contrats in DB :
 		Assert.assertEquals(2, listContrats.size());
 	}
-	
-	
+
 	@Test
 	public void AtestAddContrat() throws ParseException {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date d = dateFormat.parse("2021-11-15");
-		Contrat c = new Contrat(d, "CDI", 5000); 
-		Contrat contratAdded = cs.addContrat(c); 
+		Contrat c = new Contrat(d, "CDI", 5000);
+		Contrat contratAdded = cs.addContrat(c);
 		Assert.assertEquals(c.getTypeContrat(), contratAdded.getTypeContrat());
 	}
- 
+
 	@Test
-	public void BtestModifyContrat() throws ParseException   {
+	public void BtestModifyContrat() throws ParseException {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date d = dateFormat.parse("2021-01-01");
-		Contrat c = new Contrat(7L, d, "CDN", 5000); 
-		Contrat contratUpdated  = cs.updateContrat(c); 
+		Contrat c = new Contrat(7L, d, "CDN", 5000);
+		Contrat contratUpdated = cs.updateContrat(c);
 		Assert.assertEquals(c.getTypeContrat(), contratUpdated.getTypeContrat());
 	}
 
 	@Test
 	public void CtestRetrieveContrat() {
-		Contrat contratRetrieved = cs.retrieveContrat("1"); 
+		Contrat contratRetrieved = cs.retrieveContrat("1");
 		Assert.assertEquals(1L, contratRetrieved.getReference().longValue());
 	}
-	
+
 	@Test
 	public void EtestDeleteContrat() {
-		cs.deleteContrat("2");
+		if (cs.retrieveContrat("2") != null)
+			cs.deleteContrat("2");
 		Assert.assertNull(cs.retrieveContrat("2"));
 	}
-	
-	
+
 }
