@@ -44,7 +44,7 @@ public class DepartementServiceImplTest {
 		Assert.assertEquals(d.getName(), departementAdded.getName());
 		log.info("Departement ajouté  : "+ d);
 	}
-/*
+
 	@Test
 	public void testModifyDep() throws ParseException   {
 		Departement d = new Departement(9,"Réseau");
@@ -62,10 +62,10 @@ public class DepartementServiceImplTest {
 
 	@Test
 	public void testDeleteDepartement() {
-		us.deleteDep("37");
-		Assert.assertNull(us.retrieveDep("37"));
+		us.deleteDep("40");
+		Assert.assertNull(us.retrieveDep("40"));
 	} 
-	*/
+	
 }
 
 
